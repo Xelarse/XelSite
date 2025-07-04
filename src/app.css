@@ -1,3 +1,60 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+:root {
+    --bearBase: #fef6d2;
+    --bearFlesh: #f6d8be;
+    --bearNose: #ba9163;
+    --bearDecalLight: #fee08a;
+    --bearDecalDark: #e8bc8d;
+    
+    --bg-base: var(--bearBase);
+    --bg-secondary: var(--bearNose);
+    --text-colour: black;
+    
+    overflow-x: hidden;
+}
+
+.dark {
+    --bg-base: var(--bearNose);
+    --bg-secondary: var(--bearBase);
+    --text-colour: var(--bearFlesh);
+}
+
+body {
+    background: var(--bg-base);
+    margin: 0;    
+}
+
+
+/* Paw */
+body::before {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60vh;
+    pointer-events: none;
+
+    background-image:
+    radial-gradient(circle, var(--bg-secondary) 60%, var(--bg-base) 60.2%, transparent 0%), /* left */
+    radial-gradient(circle, var(--bg-secondary) 60%, var(--bg-base) 60.2%, transparent 0%), /* center */
+    radial-gradient(circle, var(--bg-secondary) 60%, var(--bg-base) 60.2%, transparent 0%), /* right */
+    radial-gradient(circle, var(--bg-secondary) 60%, var(--bg-base) 60.2%, transparent 0%); /* pad */
+        
+    background-size:    
+    30vh 30vh,  /* left */    
+    30vh 30vh,  /* center */
+    30vh 30vh,  /* right */
+    50vh 50vh;  /* pad */
+    
+    background-position:
+    calc(50% - 25vh) 95%,   /* left */
+    50% 60%,                /* center */
+    calc(50% + 25vh) 95%,   /* right */
+    50% 425%;               /* pad */    
+    
+    background-repeat: no-repeat;
+    z-index: -1000;
+}
