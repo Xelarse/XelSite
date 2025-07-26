@@ -5,13 +5,13 @@
 	const body = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, impedit dolores. Quaerat, facilis voluptates iste suscipit totam, culpa cum tempora sit dolorum perferendis quisquam enim quo alias maxime magnam sed!"
 </script>
 
-<div class="img-container">
-	<img alt="Me :)" src="{logo}"/>
-</div>
+<!--<div class="img-container">-->
+<!--	<img alt="Me :)" src="{logo}"/>-->
+<!--</div>-->
 
-<h1>{title}</h1>
+<!--<h1>{title}</h1>-->
 
-<p>{body}</p>
+<!--<p>{body}</p>-->
 
 <style>
     .img-container {
