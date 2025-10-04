@@ -12,6 +12,9 @@ node_modules
 .DS_Store
 Thumbs.db
 
+# Package lock ignore for cross OS dep issues
+.package-lock.json
+
 # Env
 .env
 .env.*
