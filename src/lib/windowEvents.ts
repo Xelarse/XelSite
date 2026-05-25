@@ -1,6 +1,6 @@
 import { writable } from "svelte/store";
 
-const mobileWidth = 880;
+const mobileWidth = 1200;
 type WindowDims = {
 	width: number;
 	height: number;
