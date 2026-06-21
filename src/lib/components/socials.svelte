@@ -1,7 +1,7 @@
 <script lang="ts">
 	import {openPageInNewTab} from '$lib/utility';
 	
-	let {tailwindTextClass} = $props();
+	let {iconTextSize} = $props();
 
 	const socialLinks = [
 		{"name": "Bluesky", "url": "https://bsky.app/profile/xelarse.bsky.social", "iconClass": "bx-cloud"},
@@ -12,11 +12,9 @@
 <div>
 	<ul>
 		{#each socialLinks as link}
-			<li>
 				<button	onclick={() => openPageInNewTab(link.url)} aria-label="{link.name}">
-					<i class="bx {link.iconClass} {tailwindTextClass}"></i>
+					<i class="bx {link.iconClass}" style="font-size: {iconTextSize};"></i>
 				</button>
-			</li>
 		{/each}
 	</ul>
 </div>
@@ -28,7 +26,7 @@
 			justify-content: center;
 	}
 	
-	ul li {
+	ul button {
       border: lightslategrey solid 2px;
       border-radius: 10px;
 			margin: 10px;

@@ -14,10 +14,12 @@
 	const navLinks = [
 		{"name": "Projects", "path": "/projects", "iconClass": "bx-code"},
 		{"name": "Blogs", "path": "/blogs", "iconClass": "bx-book-open"},
-		{"name": "Char", "path": "/ocs", "iconClass": "bxl-baidu"},
+		{"name": "Characters", "path": "/ocs", "iconClass": "bxl-baidu"},
 	]
 </script>
 
+<div style="display: grid;">
+	
 {#if $isInitialized}
 	<nav>
 		{#if $isMobile}
@@ -43,7 +45,6 @@
 
 		{/if}
 		
-
 		<img alt="Me :)" src="{logo}"/>
 	</nav>
 
@@ -56,10 +57,10 @@
 							<i class="bx {link.iconClass}"></i>
 							<p>{link.name}</p>
 						</a>
+						<hr/>
 					{/each}
 				</ul>
-<!--				<span class="border-b-2 border-solid border-slate-950 mx-20 my-2"></span>-->
-<!--				<SocialsWidget tailwindTextClass="text-5xl"></SocialsWidget>-->
+				<SocialsWidget iconTextSize="6vh"></SocialsWidget>
 			</div>
 		{:else}
 			<div class="page-content" in:fly={{x: $windowDims.width + 50, delay: 150}} out:fly={{x: 50, duration: 150}}>
@@ -70,32 +71,34 @@
 
 {/if}
 
+</div>
+	
 <style>
 	nav {
-			width: 97vw;
-			height: 6vh;
+			width: 90vw;
+			height: 8vh;
 			display: flex;
 			align-items: center;
 			box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 			border: lightslategrey solid 2px;
 			border-radius: 10px;
-      margin: 1vh auto 0;
+      margin: 1.5% 5%;
   }
 	
 	nav a {
-			font-size: 6vh;
+			font-size: 5vh;
 			text-decoration: none;
 			padding: 0 2vh;
 	}
 	
 	nav button {
-			padding-left: 1vw;
+			padding-left: 2%;
 			font-size: 6vh;
 			margin-right: auto;
 	}
 	
 	nav img {
-			padding-right: 1vh;
+			padding-right: 2%;
 			height: 5vh;
 			margin-left: auto;
 	}
@@ -110,30 +113,45 @@
   }
 	
 	.mobile-menu {
+      width: 90vw;
+      margin: 0 5%;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
       border: lightslategrey solid 2px;
 			border-radius: 10px;
 			display: flex;
 			flex-direction: column;
 	}
 	
+	.mobile-menu ul {
+			margin: 0 8%;
+	}
+	
 	.mobile-menu ul a {
-			border: lightslategrey solid 2px;
-			border-radius: 10px;
-			margin: 1vh;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: left;
+			text-decoration: none;
+	}
+	
+	.mobile-menu ul hr {
+			margin: 0 1%;
+      border-bottom: lightslategrey solid 2px;
 	}
 
 	.mobile-menu ul a i {
 			justify-content: left;
-			padding: 0 2vh;
+			padding-right: 5%;
+			font-size: 5vh;
 	}
+
+  .mobile-menu ul a p {
+      justify-content: left;
+			font-size: 4vh;
+  }
 	
 	.page-content {
-			width: 97%;
-			margin-left: 1.5%;
+			margin: 2% 5%;
 	}
 	
 </style>

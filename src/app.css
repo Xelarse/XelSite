@@ -66,6 +66,10 @@ button {
     outline: inherit;
 }
 
+ul {
+    padding: 0;
+}
+
 h1 {
     font-family: Monaco, Helvetica, sans-serif;
     color: var(--text-colour);
