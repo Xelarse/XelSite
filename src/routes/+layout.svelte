@@ -14,7 +14,7 @@
 	const navLinks = [
 		{"name": "Projects", "path": "/projects", "iconClass": "bx-code"},
 		{"name": "Blogs", "path": "/blogs", "iconClass": "bx-book-open"},
-		{"name": "Characters", "path": "/ocs", "iconClass": "bxl-baidu"},
+		{"name": "Characters", "path": "/oc", "iconClass": "bxl-baidu"},
 	]
 </script>
 
@@ -151,7 +151,7 @@
   }
 	
 	.page-content {
-			margin: 2% 5%;
+			width: 100%
 	}
 	
 </style>

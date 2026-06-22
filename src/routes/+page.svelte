@@ -2,41 +2,42 @@
 	import logo from '$lib/assets/logo.png';
 	
 	const title = "Xel's home!";
-	const body = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, impedit dolores. Quaerat, facilis voluptates iste suscipit totam, culpa cum tempora sit dolorum perferendis quisquam enim quo alias maxime magnam sed!"
+	let hasHovered = $state(false);
 </script>
 
-<!--<div class="img-container">-->
-<!--	<img alt="Me :)" src="{logo}"/>-->
-<!--</div>-->
-
-<!--<h1>{title}</h1>-->
-
-<!--<p>{body}</p>-->
+<div>
+	<img alt="Me :)" class={[hasHovered && "speen"]} src={logo} onpointerover={() => hasHovered=true}/>
+	<h1>{title}</h1>
+</div>
 
 <style>
-    .img-container {
-        height: 70vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-				padding: 0 10%;
+		div{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-top: 5%;
+		}
+		
+		img {
+				width: 80%;
+		}
+		
+		@keyframes speen {
+				from {
+						transform: rotate(0deg) scale(80%);
+				}
+				
+				to {
+						transform: rotate(360deg) scale(80%);
+				}
     }
 		
-		.img-container img {
-				max-height: 100%;
-				width: auto;
+		.speen{
+				animation: speen linear 8s infinite;
 		}
 		
 		h1 {
-				height: 23vh;
-				width: auto;
 				text-align: center;
-				font-size: 15vw;
-				padding-top: 5%;
-		}
-		
-		p {
-				text-align: center;
-				font-size: 4vw;
+				font-size: 6vh;
 		}
 </style>
