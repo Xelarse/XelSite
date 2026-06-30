@@ -14,7 +14,7 @@
 	const navLinks = [
 		{"name": "Projects", "path": "/projects", "iconClass": "bx-code"},
 		{"name": "Blogs", "path": "/blogs", "iconClass": "bx-book-open"},
-		{"name": "Characters", "path": "/oc", "iconClass": "bxl-baidu"},
+		{"name": "Characters", "path": "/characters", "iconClass": "bxl-baidu"},
 	]
 </script>
 
@@ -49,24 +49,28 @@
 	</nav>
 
 	{#if $isMobile}
-		{#if menuActive}
-			<div class="mobile-menu" in:fly={{x: -50, delay: 150}} out:fly={{x:-200, duration: 150}}>
-				<ul>
-					{#each navLinks as link}
-						<a href="{link.path}" onclick={closeMenu}>
-							<i class="bx {link.iconClass}"></i>
-							<p>{link.name}</p>
-						</a>
-						<hr/>
-					{/each}
-				</ul>
-				<SocialsWidget iconTextSize="6vh"></SocialsWidget>
-			</div>
+			{#if menuActive}
+				<div class="mobile-menu" in:fly={{x: -50, delay: 150}} out:fly={{x:-200, duration: 150}}>
+					<ul>
+						{#each navLinks as link}
+							<a href="{link.path}" onclick={closeMenu}>
+								<i class="bx {link.iconClass}"></i>
+								<p>{link.name}</p>
+							</a>
+							<hr/>
+						{/each}
+					</ul>
+					<SocialsWidget iconTextSize="6vh"></SocialsWidget>
+				</div>
+			{:else}
+				<div class="page-content" in:fly={{x: $windowDims.width + 50, delay: 150}} out:fly={{x: 50, duration: 150}}>
+					{@render children()}
+				</div>
+			{/if}
 		{:else}
 			<div class="page-content" in:fly={{x: $windowDims.width + 50, delay: 150}} out:fly={{x: 50, duration: 150}}>
 				{@render children()}
 			</div>
-		{/if}
 	{/if}
 
 {/if}

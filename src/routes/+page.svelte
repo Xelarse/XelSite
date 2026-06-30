@@ -19,16 +19,17 @@
 		}
 		
 		img {
-				width: 80%;
+				margin: 5vh auto; 
+				width: 35vh;
 		}
 		
 		@keyframes speen {
 				from {
-						transform: rotate(0deg) scale(80%);
+						transform: rotate(0deg);
 				}
 				
 				to {
-						transform: rotate(360deg) scale(80%);
+						transform: rotate(360deg);
 				}
     }
 		
