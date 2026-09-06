@@ -24,14 +24,12 @@
 
 <style>
 	.container {
-			display: flex;
-			flex-direction: column;
-			margin: 3vh 6vw;
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
-      border: lightslategrey solid 2px;
-      border-radius: 10px;
 			height: 25vh;
+			width: 100%;
 			position: relative;
+			margin: 3% 0;
+      border-radius: 10px;
 	}
 
 	.banner-gradient {
