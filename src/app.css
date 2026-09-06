@@ -8,8 +8,11 @@
     --bg-base: var(--bearBase);
     --bg-secondary: var(--bearNose);
     --text-colour: black;
-    
+
+    /*Scrollbar disabling*/
     overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .dark {
