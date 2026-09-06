@@ -12,18 +12,9 @@
 	]
 </script>
 
-<div class="container">
-	{#each tempCharacters as char}
-			<CharacterDisplay name={char.name} image={char.image} corner={char.corner} />
-	{/each}
-</div>
+{#each tempCharacters as char}
+		<CharacterDisplay name={char.name} image={char.image} corner={char.corner} />
+{/each}
 
 <style>
-	.container {
-      width: 90vw;
-			display: flex;
-			flex-direction: column;
-      align-items: center;
-      margin: 0 5%;
-	}
 </style>

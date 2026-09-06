@@ -11,13 +11,6 @@
 </div>
 
 <style>
-		div{
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-top: 5%;
-		}
-		
 		img {
 				margin: 5vh auto; 
 				width: 35vh;

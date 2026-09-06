@@ -155,7 +155,11 @@
   }
 	
 	.page-content {
-			width: 100%;
+      width: 90vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 5%;
 			position: relative;
 	}
 	
