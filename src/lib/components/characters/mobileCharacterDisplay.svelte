@@ -1,26 +1,20 @@
 <script lang="ts">
-	import {isMobile} from '$lib/windowEvents';
-	
 	let {image, name, corner} = $props();
 	let hovering = $state(false);
 </script>
 
 
-{#if $isMobile}
-		<div style="--corner-colour: {corner}; --gradient-length: {hovering ? "40%" : "70%"}; --gradient-pitch: {hovering ? "180deg" : "145deg"};"
-				 class="container"
-				 role="link"
-				 tabindex="0"
-				 onpointerenter={() => hovering = true}
-				 onpointerleave={() => hovering = false}>
-			<img src={image} alt="{name} xel" />
-			<div class="banner-gradient"></div>
-			<h1>{name}</h1>
+<div style="--corner-colour: {corner}; --gradient-length: {hovering ? "40%" : "70%"}; --gradient-pitch: {hovering ? "180deg" : "145deg"};"
+		 class="container"
+		 role="link"
+		 tabindex="0"
+		 onpointerenter={() => hovering = true}
+		 onpointerleave={() => hovering = false}>
+	<img src={image} alt="{name} xel" />
+	<div class="banner-gradient"></div>
+	<h1>{name}</h1>
 
-		</div>
-	{:else}
-	<div></div>
-{/if}
+</div>
 
 <style>
 	.container {

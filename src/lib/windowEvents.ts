@@ -1,6 +1,6 @@
 import { writable } from "svelte/store";
 
-const mobileWidth = 1100;
+const widthHeightDiff = 100;
 type WindowDims = {
 	width: number;
 	height: number;
@@ -17,7 +17,7 @@ const updateDims = () => {
 };
 
 const updateIsMobile = () => {
-	isMobile.set(window.innerWidth <= mobileWidth);
+	isMobile.set(window.innerWidth - window.innerHeight <= widthHeightDiff);
 };
 
 const resizeConsumers: (() => void)[] = [updateDims, updateIsMobile];
